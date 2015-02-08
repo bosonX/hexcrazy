@@ -30,7 +30,7 @@ app.use(cookieParser());
 app.use(sass({
     src: __dirname + '/assets',
     dest:__dirname + '/public',
-    debug: true,
+    debug: false,
     outputStyle: 'compressed'
 }));
 

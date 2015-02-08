@@ -7,37 +7,21 @@
 	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
-	Hi there 	
-
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="col-sm-6" id="circle">1-1</div>
-				<div class="col-sm-6" id="circle">1-2</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-12" style="position:relative;left: -50px;top:-13px">
-				<div class="col-sm-4" id="circle">2-1</div>
-				<div class="col-sm-10" id="circle">2-2</div>
-				<div class="col-sm-4" id="circle">2-3</div>
-			</div>
-			
-		</div>
-
-		<div class="row">
-			
-				<div class="col-sm-12" style="position:relative;top:-26px">
-					<div class="col-sm-6" id="circle">3-1</div>
-					<div class="col-sm-6" id="circle">3-2</div>
-				</div>
-		</div>
-
+		<h1>Hex Crazy</h1>
+		<svg width={{svg_width}} height={{svg_height}}>
+			{% for circle in circles %}
+				<circle cx={{circle.cx}} cy={{circle.cy}} r={{radius}} fill=#3F7CAC data-status="0" id={{circle.id}} />
+			{% endfor %}
+		</svg>
+		<h2>You have a total number of {{total_units}} units!</h2>
 
 	</div>
 
 	<script src="jquery/dist/jquery.min.js"></script>
 	<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="javascripts/moveLogic.js"></script>
+	<script> hi() </script>
 
 
 </body>
