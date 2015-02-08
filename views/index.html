@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script>
+		var timerStart = Date.now();
+	</script>
 	<meta charset="UTF-8">
 	<title>Hex Crazy</title>
 	<link rel="stylesheet" href="stylesheets/style.css">
@@ -21,8 +24,16 @@
 	<script src="jquery/dist/jquery.min.js"></script>
 	<script src="bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="javascripts/moveLogic.js"></script>
-	<script> hi() </script>
 
-
+	<script>
+		$(document).ready(function(){
+			console.log("Time for DOM to load", (Date.now() - timerStart)/1000, "s");
+		})
+		$(window).ready(function(){
+			var total_time = (Date.now() - timerStart);
+			console.log("Time for everything to load", total_time/1000, "s");
+			console.log("Average unit time per thousands", (total_time/{{total_units}} * 1000),"ms")
+		})
+	</script>
 </body>
 </html>
