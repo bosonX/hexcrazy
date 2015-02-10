@@ -15,12 +15,14 @@
 		<svg width={{svg_width}} height={{svg_height}}>
 			{% for circle in circles %}
 				<circle cx={{circle.cx}} cy={{circle.cy}} r={{radius}} fill=#3F7CAC data-status="0" id={{circle.id}} />
-				<text x={{circle.cx}} y={{circle.cy}} font-size={{radius}} text-anchor="middle" alignment-baseline="middle">
+	<!-- 			<text x={{circle.cx}} y={{circle.cy}} font-size={{radius}} text-anchor="middle" alignment-baseline="central">
 				    {{circle.id}}
-				</text>
+				</text> -->
 			{% endfor %}
 		</svg>
+		<button id="step">step</button>
 		<h2>You have a total number of {{total_units}} units!</h2>
+
 	</div>
 
 	<script src="jquery/dist/jquery.min.js"></script>
